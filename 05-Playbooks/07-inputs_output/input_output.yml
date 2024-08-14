@@ -1,8 +1,5 @@
 ---
  - hosts: localhost
-   vars:
-    x: 45
-    my_name: "Kennedy"
    vars_prompt:
     - name: user_name
       prompt: Enter your user name 
