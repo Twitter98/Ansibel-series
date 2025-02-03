@@ -19,7 +19,7 @@
    $ ansible db –m shell –a "cat /etc/passwd && pwd"
 ```
 ## **3. File Module**
-- Used to create files and directories 
+- Used to create files and directories \
  a) Create a file named file25
 ```
   $ ansible group1 -m file -a "path=file26.txt state=touch"
