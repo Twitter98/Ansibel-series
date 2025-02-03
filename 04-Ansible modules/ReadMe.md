@@ -103,9 +103,10 @@ This will print a large amount of JSON data containing details about the remote 
  $ ansible server1 -i inventory -m setup -a "gather_subset=min"
 ```
 To print only specific items of the JSON, you can use the filter argument. This will accept a wildcard pattern used to match strings, similar to fnmatch. For example, to obtain information about both the ipv4 and ipv6 network interfaces, you can use *ipv* as filter:
-
-  **$ ansible server1 -i inventory -m setup -a "filter=*ipv*"**
-
+```
+  $ ansible server1 -i inventory -m setup -a "filter=*ipv*"
+```
 If you’d like to check disk usage, you can run a Bash command calling the df utility, as follows:
-
+```
   **$ ansible all -i inventory -a "df -h"**
+```
