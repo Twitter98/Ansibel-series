@@ -113,19 +113,22 @@ $ ansible all -m fetch -a "src=./hosts dest=./"
           - inventory_hostname
           - inventory_hostname_short
           - groups/ groups.keys()
-
-  **$ ansible all -m debug -a "var='This is a debug module'"** \
-  **$ ansible all -m debug -a "msg={{}}"**
-
+```
+  $ ansible all -m debug -a "var='This is a debug module'" 
+  $ ansible all -m debug -a "msg={{}}"
+```
  **inventory_hostname**
   - You can use debug to display variables.
-
-  **$ ansible all -m debug -a "var='inventory_hostname'"** \
-  **$ ansible all -m debug -a "msg={{inventory_hostname}}"**
-
-  - If you have an inventory with entries like 'server1.cloud.production.host' then the command below will return server1. \
-  **$ ansible all -m debug -a "msg={{inventory_hostname_short}}"**
-
-  - You can also use debug module to display groups or groups keys in your inventory. \
-  **$ ansible all -m debug -a "var='groups'"** \
-  **$ ansible all -m debug -a "var='groups.keys()'"**
+```
+  $ ansible all -m debug -a "var='inventory_hostname'"
+  $ ansible all -m debug -a "msg={{inventory_hostname}}"
+```
+  - If you have an inventory with entries like 'server1.cloud.production.host' then the command below will return server1. 
+```
+  $ ansible all -m debug -a "msg={{inventory_hostname_short}}"
+```
+  - You can also use debug module to display groups or groups keys in your inventory.
+```
+  $ ansible all -m debug -a "var='groups'" 
+  $ ansible all -m debug -a "var='groups.keys()'"
+```
