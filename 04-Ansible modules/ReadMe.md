@@ -108,5 +108,5 @@ To print only specific items of the JSON, you can use the filter argument. This 
 ```
 If you’d like to check disk usage, you can run a Bash command calling the df utility, as follows:
 ```
-  **$ ansible all -i inventory -a "df -h"**
+  $ ansible all -i inventory -a "df -h"
 ```
