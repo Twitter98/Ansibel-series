@@ -34,7 +34,7 @@
 - Used to copy files from the ansible control node to the remote
 node or copy files from one location to another in the remote
 node. \
-a) From ansible control node to remote node \
+a) From ansible control node to remote node 
 ```
   $ ansible group1 -m copy -a "src=/source/file/path dest=/dest/location"
   $ ansible group1 -m copy -a "src=/etc/hosts dest=/home/ansible"
