@@ -4,18 +4,21 @@
 - They are the main building blocks of Ansible and are basically reusable scripts that are used by Ansible Ad-hoc and playbooks.
 
 - Ansible comes with a number of reusable modules. To list all available modules
-  ```
+```
  $ ansible-doc -l
 ```
 - The basic syntax of an Ad-hoc command is
+  
 ```
   $ ansible [ -i inventory_file ] <server1:server2:Group1:Group2> -m <module> [-a arguments]
 ```
 - To execute a module with arguments, include the -a flag followed by the appropriate options in double quotes, like this:
+  
 ```
   ansible target -i inventory -m module -a "module options"
 ```
 - As an example, this will use the apt module to install the package tree on server1:
+  
 ```
  $ ansible server1 -i inventory -m apt -a "name=git state=present"
 ```
@@ -25,6 +28,7 @@
 - This allows you to execute virtually any command that you could normally execute via an SSH terminal, as long as the connecting user has sufficient permissions and there aren’t any interactive prompts.
 
 - This example executes the uptime command on all servers from the specified inventory:
+  
 ```
  $ ansible all -i inventory -a "uptime"
 ```
