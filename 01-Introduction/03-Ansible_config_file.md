@@ -13,9 +13,9 @@
 and for this there is a priority for these files.
 - You can generate ansible.cfg by running the command
 
-'''    
+```    
   **$ ansible-config init --disabled > ansible.cfg**
-'''
+```
 
 **Locations with priority(starting from top to bottom):** 
 - **ANSIBLE_CONFIG** environment variable  
@@ -31,7 +31,8 @@ and for this there is a priority for these files.
 - Anytime you make an ssh connection with a server for the first time, you will be prompted to confirm if you want to continue making the connection.
 - This feature is by default set to true in the ansible.cfg file
 - Disable this by uncommenting the line in the configuration file or you can also export an environmental variable using the command below.
-
+```
        host_key_checking = False
                or
       $ export ANSIBLE_HOST_KEY_CHECKING=false
+```
