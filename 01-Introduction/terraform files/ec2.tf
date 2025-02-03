@@ -4,7 +4,6 @@ resource "aws_instance" "ubuntu" {
   instance_type = var.my_instance_type
   iam_instance_profile = aws_iam_instance_profile.ansible-profile.id
   user_data = data.template_cloudinit_config.user-data.rendered
-  subnet_id = "subnet-0f71e389abd89d59d"
 
   key_name = var.my_key
 
@@ -17,7 +16,6 @@ resource "aws_instance" "ubuntu-hosts" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.my_instance_type
   user_data     = file("${path.module}/create_ansible_user_ubuntu.sh")
-  subnet_id     = "subnet-0f71e389abd89d59d"
   iam_instance_profile = aws_iam_instance_profile.ansible-profile.id
   key_name      = var.my_key
   count         = 2
@@ -31,7 +29,6 @@ resource "aws_instance" "rhel-hosts" {
   ami           = data.aws_ami.rhel.id
   instance_type = var.my_instance_type
   user_data     = file("${path.module}/create_ansible_user_rhel.sh")
-  subnet_id     = "subnet-0f71e389abd89d59d"
   iam_instance_profile = aws_iam_instance_profile.ansible-profile.id
   key_name      = var.my_key
   count         = 1
